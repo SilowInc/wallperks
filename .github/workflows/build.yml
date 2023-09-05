@@ -17,6 +17,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.10'
+          sdk-version: '3.0.1'
           channel: 'stable'
 
       - name: Build APK
