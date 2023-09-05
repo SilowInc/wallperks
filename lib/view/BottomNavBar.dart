@@ -4,7 +4,6 @@ import 'package:wallperks/api/WallpaperApiController.dart';
 
 import 'HomeScreen.dart';
 import 'SearchScreen.dart';
-import 'VideoListScreen.dart';
 
 class BottomNavBar extends GetView<WallpaperApiController> {
   const BottomNavBar({super.key});
@@ -18,7 +17,7 @@ class BottomNavBar extends GetView<WallpaperApiController> {
             : wc.currentIndex == 1
                 ? const SearchScreen()
                 : wc.currentIndex == 2
-                    ? const VideoListScreen()
+                    ? Container()
                     : const HomeScreen(),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
