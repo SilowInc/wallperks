@@ -1,0 +1,26 @@
+name: Build APK Release
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.7.7'
+          channel: 'stable'
+
+      - name: Build APK
+        run: |
+          flutter clean
+          flutter pub get
+          flutter build apk --release
