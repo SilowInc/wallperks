@@ -16,7 +16,7 @@ jobs:
       - name: Set Up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '4.2.2'
+          flutter-version: '3.3.10'
           channel: 'stable'
 
       - name: Build APK
